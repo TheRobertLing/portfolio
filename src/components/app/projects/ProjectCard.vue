@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { GithubIcon } from '@/components/icons'
+import { GithubIcon } from '@/components/app/shared'
 
 defineProps<{
   name: string
@@ -33,7 +33,7 @@ defineProps<{
 
     <CardHeader class="gap-3">
       <CardTitle>{{ name }}</CardTitle>
-      <CardDescription class="mb-0 tracking-wide font-extralight">
+      <CardDescription class="mb-0 tracking-wide font-normal">
         {{ description }}
       </CardDescription>
       <ul class="flex flex-wrap gap-2">
