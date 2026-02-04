@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { GithubIcon } from '@/components/app/shared'
+import GithubIcon from '@/components/GithubIcon.vue'
 
 defineProps<{
   name: string
@@ -47,12 +47,14 @@ defineProps<{
 
     <CardFooter class="gap-3 flex flex-col sm:flex-row">
       <Button variant="outline" as-child>
-        <a :href="githubLink" class="cursor-pointer w-full sm:w-fit">
+        <a :href="githubLink" class="cursor-pointer w-full sm:w-fit" tabindex="1">
           <GithubIcon /> Github Repository
         </a>
       </Button>
       <Button as-child>
-        <a :href="demoLink" class="cursor-pointer w-full sm:w-fit"> <ExternalLink /> Live Demo </a>
+        <a :href="demoLink" class="cursor-pointer w-full sm:w-fit" tabindex="1">
+          <ExternalLink /> Live Demo
+        </a>
       </Button>
     </CardFooter>
   </Card>
